@@ -1,1 +1,94 @@
+1.Split the String:
 
+s="Hi there Sam!"
+s="Hi there Sam!"
+x=s.split(" ")
+print(x)
+['Hi', 'there', 'Sam!']
+2.Use .format() to print the following string
+
+Output should be: the diameter of earth is 12742 kilometer
+
+planet= "earth"
+diameter= 12742
+text="the diameter of {planet} is {diameter} kilometers"
+print(text.format(planet="earth",diameter=12742))
+the diameter of earth is 12742 kilometers
+3.In this nest dictionary grab the word "hello
+
+d={"k1":[1,2,3,{"tricky":["oh","man","inspection",{"target":[1,2,3,"hello"]}]}]}
+
+d={"k1":[1,2,3,{"tricky":["oh","man","inspection",{"target":[1,2,3,"hello"]}]}]}
+print(d["k1"][3]["tricky"][3]["target"][3])
+hello
+4.1 Create an array of 10 zeros
+
+4.2 Create an array of 10 fives
+
+import numpy as np
+arr=np.zeros(10)
+print(arr)
+[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+import numpy as np
+arr=np.ones(10)*5
+print(arr)
+[5. 5. 5. 5. 5. 5. 5. 5. 5. 5.]
+Create an array of all even numbers from 20 to 35
+import numpy as np
+array=np.arange(20,35,2)
+print(array)
+[20 22 24 26 28 30 32 34]
+Create a 3x3 matrix with the values ranging from 0 to 8
+import numpy as np
+x=np.arange(0,9).reshape(3,3)
+print(x)
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+Concatenate a and b
+a=np.array([1,2,3]) and b=np.array([4,5,6])
+
+import numpy as np
+a=np.array([1,2,3])
+b=np.array([4,5,6])
+con=np.concatenate((a,b),axis=0)
+print(con)
+[1 2 3 4 5 6]
+Create a data frame with 3 rows and 2 columns
+import pandas as pd
+import pandas as pd
+data=[["vino",45],["balaji",56],["raju",26]]
+df=pd.DataFrame(data,columns=["name","age"])
+df
+name	age
+0	vino	45
+1	balaji	56
+2	raju	26
+Generate the series of dates from 1st jan 2023 to 10th feb 2023
+import pandas as pd
+from datetime import date,timedelta
+sdate=date(2023,1,1)
+edate=date(2023,2,10)
+pd.date_range(sdate,edate-timedelta(days=1),freq="d")
+DatetimeIndex(['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04',
+               '2023-01-05', '2023-01-06', '2023-01-07', '2023-01-08',
+               '2023-01-09', '2023-01-10', '2023-01-11', '2023-01-12',
+               '2023-01-13', '2023-01-14', '2023-01-15', '2023-01-16',
+               '2023-01-17', '2023-01-18', '2023-01-19', '2023-01-20',
+               '2023-01-21', '2023-01-22', '2023-01-23', '2023-01-24',
+               '2023-01-25', '2023-01-26', '2023-01-27', '2023-01-28',
+               '2023-01-29', '2023-01-30', '2023-01-31', '2023-02-01',
+               '2023-02-02', '2023-02-03', '2023-02-04', '2023-02-05',
+               '2023-02-06', '2023-02-07', '2023-02-08', '2023-02-09'],
+              dtype='datetime64[ns]', freq='D')
+Create 2D list to dataframe
+list=[[1,"aaa",22],[2,"bbb",25],[3,"ccc",24]]
+
+import pandas as pd
+list=[[1,"aaa",22],[2,"bbb",25],[3,"ccc",24]]
+df=pd.DataFrame.from_records(list)
+df
+0	1	2
+0	1	aaa	22
+1	2	bbb	25
+2	3	ccc	24
